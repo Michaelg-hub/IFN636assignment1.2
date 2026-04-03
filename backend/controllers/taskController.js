@@ -32,6 +32,19 @@ const updateTask = async(req, res) => {
     }
 }
 
+// this function deletes a task.
+const deleteTask = async(req, res) => {
+    try {
+        const task = await Task.findById(req.params.id);
+        if(!task) return res.status(404).json({message: 'Task not found'});
+
+        await task.remove();
+        res.json({message: 'Task deleted'});
+    } catch(error){
+        res.status(500).json({message: error.message});
+    }
+}
+
 // this function fetches all tasks related to a user
 const getTasks = async (req, res) => {
     try {
@@ -40,3 +53,5 @@ const getTasks = async (req, res) => {
         res.status(500).json({message: error.message});
     }
 }
+
+module.exports = {getTasks, addtask, updateTask, deleteTask};
