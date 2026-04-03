@@ -54,4 +54,4 @@ const getTasks = async (req, res) => {
     }
 }
 
-module.exports = {getTasks, addtask, updateTask, deleteTask};
+module.exports = {getTasks, addTask, updateTask, deleteTask};
