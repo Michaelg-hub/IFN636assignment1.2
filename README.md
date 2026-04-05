@@ -21,4 +21,3 @@ This is a project which extends a task manager application by implementing basic
 **GitHub link of the starter project: **[https://github.com/nahaQUT/sampleapp_IFQ636.git](https://github.com/nahaQUT/sampleapp_IFQ636.git)
 
 ---
-
